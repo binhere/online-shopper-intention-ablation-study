@@ -1,0 +1,2576 @@
+{
+  "exp0_baseline_logistic": {
+    "meta": {
+      "timestamp": "2026-11-03 14:46:39",
+      "model_name": "Logistic Regression",
+      "notebook": "exp0_baseline.ipynb",
+      "description": "Baseline Raw Data (passthrough numerical, OHE categorical)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.6354,
+      "ap_std": 0.0263,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7337,
+        "precision_std": 0.0363,
+        "recall_mean": 0.3735,
+        "recall_std": 0.0194,
+        "f1_mean": 0.4945,
+        "f1_std": 0.0195
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.8936,
+        "precision_std": 0.0029,
+        "recall_mean": 0.9747,
+        "recall_std": 0.005,
+        "f1_mean": 0.9324,
+        "f1_std": 0.0028
+      }
+    },
+    "test_results": {
+      "ap": 0.6553,
+      "threshold": 0.5,
+      "accuracy": 0.8878,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7571,
+        "recall": 0.4162,
+        "f1_score": 0.5372,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9,
+        "recall": 0.9752,
+        "f1_score": 0.9361,
+        "support": 2059
+      },
+      "f1_macro": 0.7366
+    }
+  },
+  "exp0_baseline_xgb": {
+    "meta": {
+      "timestamp": "2026-11-03 14:46:39",
+      "model_name": "XGBoost",
+      "notebook": "exp0_baseline.ipynb",
+      "description": "Baseline XGBoost (enable_categorical=True, raw data)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.7121,
+      "ap_std": 0.0185,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6963,
+        "precision_std": 0.0259,
+        "recall_mean": 0.5819,
+        "recall_std": 0.0164,
+        "f1_mean": 0.6338,
+        "f1_std": 0.0167
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0029,
+        "recall_mean": 0.9528,
+        "recall_std": 0.0057,
+        "f1_mean": 0.9386,
+        "f1_std": 0.0034
+      }
+    },
+    "test_results": {
+      "ap": 0.7194,
+      "threshold": 0.5,
+      "accuracy": 0.8955,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.6896,
+        "recall": 0.6047,
+        "f1_score": 0.6444,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9283,
+        "recall": 0.9495,
+        "f1_score": 0.9388,
+        "support": 2059
+      },
+      "f1_macro": 0.7916
+    }
+  },
+  "exp0_baseline_mlp": {
+    "meta": {
+      "timestamp": "2026-11-03 14:46:39",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp0_baseline.ipynb",
+      "description": "Baseline MLP 16-8-1 (passthrough numerical, OHE categorical)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.6616,
+      "ap_std": 0.0207,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7682,
+        "precision_std": 0.0503,
+        "recall_mean": 0.3591,
+        "recall_std": 0.0884,
+        "f1_mean": 0.4805,
+        "f1_std": 0.0734
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.8921,
+        "precision_std": 0.0126,
+        "recall_mean": 0.9786,
+        "recall_std": 0.0096,
+        "f1_mean": 0.9332,
+        "f1_std": 0.0033
+      }
+    },
+    "test_results": {
+      "ap": 0.6688,
+      "threshold": 0.5,
+      "accuracy": 0.889,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7403,
+        "recall": 0.4476,
+        "f1_score": 0.5579,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9045,
+        "recall": 0.9709,
+        "f1_score": 0.9365,
+        "support": 2059
+      },
+      "f1_macro": 0.7472
+    }
+  },
+  "exp1_tn1_standard_scaler_lr": {
+    "meta": {
+      "timestamp": "2026-11-03 14:52:19",
+      "model_name": "Logistic Regression",
+      "notebook": "exp1_transform_scale.ipynb",
+      "description": "Exp 1 TN1: Chỉ StandardScaler toàn bộ biến số (Logistic Regression)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.6374,
+      "ap_std": 0.0258,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7428,
+        "precision_std": 0.0373,
+        "recall_mean": 0.3777,
+        "recall_std": 0.0253,
+        "f1_mean": 0.5,
+        "f1_std": 0.0237
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.8943,
+        "precision_std": 0.0038,
+        "recall_mean": 0.9755,
+        "recall_std": 0.0053,
+        "f1_mean": 0.9332,
+        "f1_std": 0.0029
+      }
+    },
+    "test_results": {
+      "ap": 0.6543,
+      "threshold": 0.5,
+      "accuracy": 0.8878,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7571,
+        "recall": 0.4162,
+        "f1_score": 0.5372,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9,
+        "recall": 0.9752,
+        "f1_score": 0.9361,
+        "support": 2059
+      },
+      "f1_macro": 0.7366
+    }
+  },
+  "exp1_tn2_log1p_scaler_lr": {
+    "meta": {
+      "timestamp": "2026-11-03 14:52:19",
+      "model_name": "Logistic Regression",
+      "notebook": "exp1_transform_scale.ipynb",
+      "description": "Exp 1 TN2: Log1p biến lệch + StandardScaler (Logistic Regression)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.6815,
+      "ap_std": 0.0207,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.704,
+        "precision_std": 0.0264,
+        "recall_mean": 0.5511,
+        "recall_std": 0.0212,
+        "f1_mean": 0.6179,
+        "f1_std": 0.0182
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9201,
+        "precision_std": 0.0035,
+        "recall_mean": 0.9569,
+        "recall_std": 0.0056,
+        "f1_mean": 0.9381,
+        "f1_std": 0.0033
+      }
+    },
+    "test_results": {
+      "ap": 0.6952,
+      "threshold": 0.5,
+      "accuracy": 0.9,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7184,
+        "recall": 0.5942,
+        "f1_score": 0.6504,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9271,
+        "recall": 0.9568,
+        "f1_score": 0.9417,
+        "support": 2059
+      },
+      "f1_macro": 0.7961
+    }
+  },
+  "exp1_tn1_standard_scaler_xgb": {
+    "meta": {
+      "timestamp": "2026-11-03 14:52:19",
+      "model_name": "XGBoost",
+      "notebook": "exp1_transform_scale.ipynb",
+      "description": "Exp 1 TN1: Chỉ StandardScaler toàn bộ biến số (XGBoost)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.717,
+      "ap_std": 0.0197,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6967,
+        "precision_std": 0.0307,
+        "recall_mean": 0.5819,
+        "recall_std": 0.016,
+        "f1_mean": 0.6337,
+        "f1_std": 0.015
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0026,
+        "recall_mean": 0.9527,
+        "recall_std": 0.0071,
+        "f1_mean": 0.9386,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7242,
+      "threshold": 0.5,
+      "accuracy": 0.8931,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.6806,
+        "recall": 0.5969,
+        "f1_score": 0.636,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9269,
+        "recall": 0.948,
+        "f1_score": 0.9373,
+        "support": 2059
+      },
+      "f1_macro": 0.7867
+    }
+  },
+  "exp1_tn2_log1p_scaler_xgb": {
+    "meta": {
+      "timestamp": "2026-11-03 14:52:19",
+      "model_name": "XGBoost",
+      "notebook": "exp1_transform_scale.ipynb",
+      "description": "Exp 1 TN2: Log1p biến lệch + StandardScaler (XGBoost)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.717,
+      "ap_std": 0.0197,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6967,
+        "precision_std": 0.0307,
+        "recall_mean": 0.5819,
+        "recall_std": 0.016,
+        "f1_mean": 0.6337,
+        "f1_std": 0.015
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0026,
+        "recall_mean": 0.9527,
+        "recall_std": 0.0071,
+        "f1_mean": 0.9386,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7242,
+      "threshold": 0.5,
+      "accuracy": 0.8931,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.6806,
+        "recall": 0.5969,
+        "f1_score": 0.636,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9269,
+        "recall": 0.948,
+        "f1_score": 0.9373,
+        "support": 2059
+      },
+      "f1_macro": 0.7867
+    }
+  },
+  "exp1_tn1_standard_scaler_mlp": {
+    "meta": {
+      "timestamp": "2026-11-03 14:52:19",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp1_transform_scale.ipynb",
+      "description": "Exp 1 TN1: Chỉ StandardScaler toàn bộ biến số (MLP 16-8-1)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.7162,
+      "ap_std": 0.0198,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7157,
+        "precision_std": 0.0305,
+        "recall_mean": 0.5693,
+        "recall_std": 0.0461,
+        "f1_mean": 0.6324,
+        "f1_std": 0.0289
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9232,
+        "precision_std": 0.0072,
+        "recall_mean": 0.9577,
+        "recall_std": 0.0082,
+        "f1_mean": 0.9401,
+        "f1_std": 0.0035
+      }
+    },
+    "test_results": {
+      "ap": 0.7282,
+      "threshold": 0.5,
+      "accuracy": 0.9,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.696,
+        "recall": 0.6414,
+        "f1_score": 0.6676,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9344,
+        "recall": 0.948,
+        "f1_score": 0.9412,
+        "support": 2059
+      },
+      "f1_macro": 0.8044
+    }
+  },
+  "exp1_tn2_log1p_scaler_mlp": {
+    "meta": {
+      "timestamp": "2026-11-03 14:52:19",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp1_transform_scale.ipynb",
+      "description": "Exp 1 TN2: Log1p biến lệch + StandardScaler (MLP 16-8-1)"
+    },
+    "config": {
+      "random_state": 42,
+      "test_size": 0.2,
+      "n_splits": 4,
+      "n_repeats": 3
+    },
+    "cv_results": {
+      "ap_mean": 0.7377,
+      "ap_std": 0.0167,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7169,
+        "precision_std": 0.0288,
+        "recall_mean": 0.5966,
+        "recall_std": 0.0389,
+        "f1_mean": 0.6501,
+        "f1_std": 0.0241
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9276,
+        "precision_std": 0.0062,
+        "recall_mean": 0.956,
+        "recall_std": 0.0078,
+        "f1_mean": 0.9415,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7549,
+      "threshold": 0.5,
+      "accuracy": 0.9074,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7422,
+        "recall": 0.6257,
+        "f1_score": 0.679,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9325,
+        "recall": 0.9597,
+        "f1_score": 0.9459,
+        "support": 2059
+      },
+      "f1_macro": 0.8124
+    }
+  },
+  "exp3_Base_Full17_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 14:58:34",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 1. log1p_Zscore"
+    },
+    "config": {
+      "features_count": 17,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.6815,
+      "ap_std": 0.0207,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.704,
+        "precision_std": 0.0264,
+        "recall_mean": 0.5511,
+        "recall_std": 0.0212,
+        "f1_mean": 0.6179,
+        "f1_std": 0.0182
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9201,
+        "precision_std": 0.0035,
+        "recall_mean": 0.9569,
+        "recall_std": 0.0056,
+        "f1_mean": 0.9381,
+        "f1_std": 0.0033
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_Base_Full17_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 14:58:38",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 1. log1p_Zscore"
+    },
+    "config": {
+      "features_count": 17,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.717,
+      "ap_std": 0.0197,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6967,
+        "precision_std": 0.0307,
+        "recall_mean": 0.5819,
+        "recall_std": 0.016,
+        "f1_mean": 0.6337,
+        "f1_std": 0.015
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0026,
+        "recall_mean": 0.9527,
+        "recall_std": 0.0071,
+        "f1_mean": 0.9386,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_Base_Full17_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 14:59:54",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 1. log1p_Zscore"
+    },
+    "config": {
+      "features_count": 17,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7359,
+      "ap_std": 0.0152,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7171,
+        "precision_std": 0.0262,
+        "recall_mean": 0.5878,
+        "recall_std": 0.0257,
+        "f1_mean": 0.6453,
+        "f1_std": 0.0159
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9261,
+        "precision_std": 0.004,
+        "recall_mean": 0.9567,
+        "recall_std": 0.0067,
+        "f1_mean": 0.9412,
+        "f1_std": 0.0029
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_2_FE1_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 14:59:57",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 2. FE1"
+    },
+    "config": {
+      "features_count": 20,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7133,
+      "ap_std": 0.0224,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7137,
+        "precision_std": 0.0269,
+        "recall_mean": 0.5811,
+        "recall_std": 0.025,
+        "f1_mean": 0.6403,
+        "f1_std": 0.0224
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.925,
+        "precision_std": 0.0043,
+        "recall_mean": 0.9567,
+        "recall_std": 0.0052,
+        "f1_mean": 0.9406,
+        "f1_std": 0.0038
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_2_FE1_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:00:01",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 2. FE1"
+    },
+    "config": {
+      "features_count": 20,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7118,
+      "ap_std": 0.019,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6994,
+        "precision_std": 0.0278,
+        "recall_mean": 0.5832,
+        "recall_std": 0.0293,
+        "f1_mean": 0.6353,
+        "f1_std": 0.0202
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9251,
+        "precision_std": 0.0047,
+        "recall_mean": 0.9533,
+        "recall_std": 0.0072,
+        "f1_mean": 0.939,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_2_FE1_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:01:12",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 2. FE1"
+    },
+    "config": {
+      "features_count": 20,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7445,
+      "ap_std": 0.0153,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7216,
+        "precision_std": 0.0242,
+        "recall_mean": 0.6081,
+        "recall_std": 0.035,
+        "f1_mean": 0.659,
+        "f1_std": 0.0189
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9295,
+        "precision_std": 0.0055,
+        "recall_mean": 0.9562,
+        "recall_std": 0.0072,
+        "f1_mean": 0.9426,
+        "f1_std": 0.0027
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_3_FE2_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:01:13",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 3. FE2"
+    },
+    "config": {
+      "features_count": 22,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7199,
+      "ap_std": 0.0199,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7215,
+        "precision_std": 0.0317,
+        "recall_mean": 0.5791,
+        "recall_std": 0.0255,
+        "f1_mean": 0.6421,
+        "f1_std": 0.0238
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0044,
+        "recall_mean": 0.9584,
+        "recall_std": 0.0062,
+        "f1_mean": 0.9413,
+        "f1_std": 0.0042
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_3_FE2_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:01:17",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 3. FE2"
+    },
+    "config": {
+      "features_count": 22,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7208,
+      "ap_std": 0.0177,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6956,
+        "precision_std": 0.0275,
+        "recall_mean": 0.5865,
+        "recall_std": 0.024,
+        "f1_mean": 0.6359,
+        "f1_std": 0.0174
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9256,
+        "precision_std": 0.0039,
+        "recall_mean": 0.9522,
+        "recall_std": 0.007,
+        "f1_mean": 0.9387,
+        "f1_std": 0.0035
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_3_FE2_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:02:20",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 3. FE2"
+    },
+    "config": {
+      "features_count": 22,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7439,
+      "ap_std": 0.0134,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7278,
+        "precision_std": 0.0378,
+        "recall_mean": 0.5876,
+        "recall_std": 0.0398,
+        "f1_mean": 0.6482,
+        "f1_std": 0.0172
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9263,
+        "precision_std": 0.006,
+        "recall_mean": 0.9585,
+        "recall_std": 0.0104,
+        "f1_mean": 0.942,
+        "f1_std": 0.0033
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_4_FE3_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:02:21",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 4. FE3"
+    },
+    "config": {
+      "features_count": 25,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7224,
+      "ap_std": 0.0198,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7222,
+        "precision_std": 0.0312,
+        "recall_mean": 0.5835,
+        "recall_std": 0.0275,
+        "f1_mean": 0.6449,
+        "f1_std": 0.0222
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9255,
+        "precision_std": 0.0045,
+        "recall_mean": 0.9582,
+        "recall_std": 0.0068,
+        "f1_mean": 0.9415,
+        "f1_std": 0.0039
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_4_FE3_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:02:26",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 4. FE3"
+    },
+    "config": {
+      "features_count": 25,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.72,
+      "ap_std": 0.0187,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7004,
+        "precision_std": 0.0286,
+        "recall_mean": 0.5832,
+        "recall_std": 0.0239,
+        "f1_mean": 0.636,
+        "f1_std": 0.0194
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9251,
+        "precision_std": 0.004,
+        "recall_mean": 0.9535,
+        "recall_std": 0.0064,
+        "f1_mean": 0.9391,
+        "f1_std": 0.0037
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_4_FE3_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:03:24",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 4. FE3"
+    },
+    "config": {
+      "features_count": 25,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7433,
+      "ap_std": 0.0156,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7177,
+        "precision_std": 0.029,
+        "recall_mean": 0.6024,
+        "recall_std": 0.0352,
+        "f1_mean": 0.654,
+        "f1_std": 0.0222
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9285,
+        "precision_std": 0.0056,
+        "recall_mean": 0.9557,
+        "recall_std": 0.0078,
+        "f1_mean": 0.9419,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_5_FE4_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:03:27",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 5. FE4"
+    },
+    "config": {
+      "features_count": 26,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages",
+        "Month_x_HasPV"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7322,
+      "ap_std": 0.018,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7188,
+        "precision_std": 0.0221,
+        "recall_mean": 0.5874,
+        "recall_std": 0.0294,
+        "f1_mean": 0.6456,
+        "f1_std": 0.0148
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9261,
+        "precision_std": 0.0046,
+        "recall_mean": 0.9571,
+        "recall_std": 0.0063,
+        "f1_mean": 0.9413,
+        "f1_std": 0.0022
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_5_FE4_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:03:33",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 5. FE4"
+    },
+    "config": {
+      "features_count": 26,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages",
+        "Month_x_HasPV"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7224,
+      "ap_std": 0.0169,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7049,
+        "precision_std": 0.0238,
+        "recall_mean": 0.5876,
+        "recall_std": 0.0232,
+        "f1_mean": 0.6406,
+        "f1_std": 0.0181
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9259,
+        "precision_std": 0.0038,
+        "recall_mean": 0.9543,
+        "recall_std": 0.0055,
+        "f1_mean": 0.9399,
+        "f1_std": 0.0032
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_5_FE4_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:04:21",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Base 17 | 5. FE4"
+    },
+    "config": {
+      "features_count": 26,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages",
+        "Month_x_HasPV"
+      ],
+      "cv": "4x3",
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7384,
+      "ap_std": 0.0175,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7107,
+        "precision_std": 0.0319,
+        "recall_mean": 0.6064,
+        "recall_std": 0.0407,
+        "f1_mean": 0.6529,
+        "f1_std": 0.0221
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9291,
+        "precision_std": 0.0063,
+        "recall_mean": 0.9537,
+        "recall_std": 0.0094,
+        "f1_mean": 0.9412,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {}
+  },
+  "exp3_TEST_Base_Full17_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:03",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 1. log1p_Zscore XGBoost"
+    },
+    "config": {
+      "features_count": 17,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.717,
+      "ap_std": 0.0197,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6967,
+        "precision_std": 0.0307,
+        "recall_mean": 0.5819,
+        "recall_std": 0.016,
+        "f1_mean": 0.6337,
+        "f1_std": 0.015
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0026,
+        "recall_mean": 0.9527,
+        "recall_std": 0.0071,
+        "f1_mean": 0.9386,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7242,
+      "threshold": 0.5,
+      "accuracy": 0.8931,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.6806,
+        "recall": 0.5969,
+        "f1_score": 0.636,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9269,
+        "recall": 0.948,
+        "f1_score": 0.9373,
+        "support": 2059
+      },
+      "f1_macro": 0.7867
+    }
+  },
+  "exp3_TEST_2_FE1_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:05",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 2. FE1 XGBoost"
+    },
+    "config": {
+      "features_count": 20,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7118,
+      "ap_std": 0.019,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6994,
+        "precision_std": 0.0278,
+        "recall_mean": 0.5832,
+        "recall_std": 0.0293,
+        "f1_mean": 0.6353,
+        "f1_std": 0.0202
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9251,
+        "precision_std": 0.0047,
+        "recall_mean": 0.9533,
+        "recall_std": 0.0072,
+        "f1_mean": 0.939,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7134,
+      "threshold": 0.5,
+      "accuracy": 0.8972,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.691,
+        "recall": 0.6204,
+        "f1_score": 0.6538,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9309,
+        "recall": 0.9485,
+        "f1_score": 0.9396,
+        "support": 2059
+      },
+      "f1_macro": 0.7967
+    }
+  },
+  "exp3_TEST_3_FE2_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:06",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 3. FE2 XGBoost"
+    },
+    "config": {
+      "features_count": 22,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7208,
+      "ap_std": 0.0177,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.6956,
+        "precision_std": 0.0275,
+        "recall_mean": 0.5865,
+        "recall_std": 0.024,
+        "f1_mean": 0.6359,
+        "f1_std": 0.0174
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9256,
+        "precision_std": 0.0039,
+        "recall_mean": 0.9522,
+        "recall_std": 0.007,
+        "f1_mean": 0.9387,
+        "f1_std": 0.0035
+      }
+    },
+    "test_results": {
+      "ap": 0.724,
+      "threshold": 0.5,
+      "accuracy": 0.8968,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.6901,
+        "recall": 0.6178,
+        "f1_score": 0.6519,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9304,
+        "recall": 0.9485,
+        "f1_score": 0.9394,
+        "support": 2059
+      },
+      "f1_macro": 0.7957
+    }
+  },
+  "exp3_TEST_4_FE3_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:07",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 4. FE3 XGBoost"
+    },
+    "config": {
+      "features_count": 25,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.72,
+      "ap_std": 0.0187,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7004,
+        "precision_std": 0.0286,
+        "recall_mean": 0.5832,
+        "recall_std": 0.0239,
+        "f1_mean": 0.636,
+        "f1_std": 0.0194
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9251,
+        "precision_std": 0.004,
+        "recall_mean": 0.9535,
+        "recall_std": 0.0064,
+        "f1_mean": 0.9391,
+        "f1_std": 0.0037
+      }
+    },
+    "test_results": {
+      "ap": 0.7349,
+      "threshold": 0.5,
+      "accuracy": 0.9033,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7199,
+        "recall": 0.6257,
+        "f1_score": 0.6695,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9322,
+        "recall": 0.9548,
+        "f1_score": 0.9434,
+        "support": 2059
+      },
+      "f1_macro": 0.8064
+    }
+  },
+  "exp3_TEST_5_FE4_XGBoost": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:07",
+      "model_name": "XGBoost",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 5. FE4 XGBoost"
+    },
+    "config": {
+      "features_count": 26,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages",
+        "Month_x_HasPV"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7224,
+      "ap_std": 0.0169,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7049,
+        "precision_std": 0.0238,
+        "recall_mean": 0.5876,
+        "recall_std": 0.0232,
+        "f1_mean": 0.6406,
+        "f1_std": 0.0181
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9259,
+        "precision_std": 0.0038,
+        "recall_mean": 0.9543,
+        "recall_std": 0.0055,
+        "f1_mean": 0.9399,
+        "f1_std": 0.0032
+      }
+    },
+    "test_results": {
+      "ap": 0.7132,
+      "threshold": 0.5,
+      "accuracy": 0.8984,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7018,
+        "recall": 0.6099,
+        "f1_score": 0.6527,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9294,
+        "recall": 0.9519,
+        "f1_score": 0.9405,
+        "support": 2059
+      },
+      "f1_macro": 0.7966
+    }
+  },
+  "exp3_TEST_Base_Full17_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:08",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 1. log1p_Zscore LR"
+    },
+    "config": {
+      "features_count": 17,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.6815,
+      "ap_std": 0.0207,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.704,
+        "precision_std": 0.0264,
+        "recall_mean": 0.5511,
+        "recall_std": 0.0212,
+        "f1_mean": 0.6179,
+        "f1_std": 0.0182
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9201,
+        "precision_std": 0.0035,
+        "recall_mean": 0.9569,
+        "recall_std": 0.0056,
+        "f1_mean": 0.9381,
+        "f1_std": 0.0033
+      }
+    },
+    "test_results": {
+      "ap": 0.6952,
+      "threshold": 0.5,
+      "accuracy": 0.9,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7184,
+        "recall": 0.5942,
+        "f1_score": 0.6504,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9271,
+        "recall": 0.9568,
+        "f1_score": 0.9417,
+        "support": 2059
+      },
+      "f1_macro": 0.7961
+    }
+  },
+  "exp3_TEST_2_FE1_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:09",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 2. FE1 LR"
+    },
+    "config": {
+      "features_count": 20,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7133,
+      "ap_std": 0.0224,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7137,
+        "precision_std": 0.0269,
+        "recall_mean": 0.5811,
+        "recall_std": 0.025,
+        "f1_mean": 0.6403,
+        "f1_std": 0.0224
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.925,
+        "precision_std": 0.0043,
+        "recall_mean": 0.9567,
+        "recall_std": 0.0052,
+        "f1_mean": 0.9406,
+        "f1_std": 0.0038
+      }
+    },
+    "test_results": {
+      "ap": 0.7235,
+      "threshold": 0.5,
+      "accuracy": 0.9017,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7178,
+        "recall": 0.6126,
+        "f1_score": 0.661,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.93,
+        "recall": 0.9553,
+        "f1_score": 0.9425,
+        "support": 2059
+      },
+      "f1_macro": 0.8018
+    }
+  },
+  "exp3_TEST_3_FE2_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:09",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 3. FE2 LR"
+    },
+    "config": {
+      "features_count": 22,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7199,
+      "ap_std": 0.0199,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7215,
+        "precision_std": 0.0317,
+        "recall_mean": 0.5791,
+        "recall_std": 0.0255,
+        "f1_mean": 0.6421,
+        "f1_std": 0.0238
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9248,
+        "precision_std": 0.0044,
+        "recall_mean": 0.9584,
+        "recall_std": 0.0062,
+        "f1_mean": 0.9413,
+        "f1_std": 0.0042
+      }
+    },
+    "test_results": {
+      "ap": 0.731,
+      "threshold": 0.5,
+      "accuracy": 0.9009,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7174,
+        "recall": 0.6047,
+        "f1_score": 0.6562,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9287,
+        "recall": 0.9558,
+        "f1_score": 0.9421,
+        "support": 2059
+      },
+      "f1_macro": 0.7992
+    }
+  },
+  "exp3_TEST_4_FE3_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:10",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 4. FE3 LR"
+    },
+    "config": {
+      "features_count": 25,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7224,
+      "ap_std": 0.0198,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7222,
+        "precision_std": 0.0312,
+        "recall_mean": 0.5835,
+        "recall_std": 0.0275,
+        "f1_mean": 0.6449,
+        "f1_std": 0.0222
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9255,
+        "precision_std": 0.0045,
+        "recall_mean": 0.9582,
+        "recall_std": 0.0068,
+        "f1_mean": 0.9415,
+        "f1_std": 0.0039
+      }
+    },
+    "test_results": {
+      "ap": 0.7353,
+      "threshold": 0.5,
+      "accuracy": 0.9013,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7169,
+        "recall": 0.6099,
+        "f1_score": 0.6591,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9296,
+        "recall": 0.9553,
+        "f1_score": 0.9423,
+        "support": 2059
+      },
+      "f1_macro": 0.8007
+    }
+  },
+  "exp3_TEST_5_FE4_LR": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:10",
+      "model_name": "LR",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 5. FE4 LR"
+    },
+    "config": {
+      "features_count": 26,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages",
+        "Month_x_HasPV"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7322,
+      "ap_std": 0.018,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7188,
+        "precision_std": 0.0221,
+        "recall_mean": 0.5874,
+        "recall_std": 0.0294,
+        "f1_mean": 0.6456,
+        "f1_std": 0.0148
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9261,
+        "precision_std": 0.0046,
+        "recall_mean": 0.9571,
+        "recall_std": 0.0063,
+        "f1_mean": 0.9413,
+        "f1_std": 0.0022
+      }
+    },
+    "test_results": {
+      "ap": 0.744,
+      "threshold": 0.5,
+      "accuracy": 0.9058,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7436,
+        "recall": 0.6073,
+        "f1_score": 0.6686,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9295,
+        "recall": 0.9611,
+        "f1_score": 0.9451,
+        "support": 2059
+      },
+      "f1_macro": 0.8068
+    }
+  },
+  "exp3_TEST_Base_Full17_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:40",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 1. log1p_Zscore MLP"
+    },
+    "config": {
+      "features_count": 17,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7359,
+      "ap_std": 0.0152,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7171,
+        "precision_std": 0.0262,
+        "recall_mean": 0.5878,
+        "recall_std": 0.0257,
+        "f1_mean": 0.6453,
+        "f1_std": 0.0159
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9261,
+        "precision_std": 0.004,
+        "recall_mean": 0.9567,
+        "recall_std": 0.0067,
+        "f1_mean": 0.9412,
+        "f1_std": 0.0029
+      }
+    },
+    "test_results": {
+      "ap": 0.7514,
+      "threshold": 0.5,
+      "accuracy": 0.907,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7592,
+        "recall": 0.5942,
+        "f1_score": 0.6667,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9276,
+        "recall": 0.965,
+        "f1_score": 0.946,
+        "support": 2059
+      },
+      "f1_macro": 0.8063
+    }
+  },
+  "exp3_TEST_2_FE1_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:06:55",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 2. FE1 MLP"
+    },
+    "config": {
+      "features_count": 20,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7445,
+      "ap_std": 0.0153,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7216,
+        "precision_std": 0.0242,
+        "recall_mean": 0.6081,
+        "recall_std": 0.035,
+        "f1_mean": 0.659,
+        "f1_std": 0.0189
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9295,
+        "precision_std": 0.0055,
+        "recall_mean": 0.9562,
+        "recall_std": 0.0072,
+        "f1_mean": 0.9426,
+        "f1_std": 0.0027
+      }
+    },
+    "test_results": {
+      "ap": 0.7491,
+      "threshold": 0.5,
+      "accuracy": 0.9058,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7621,
+        "recall": 0.5785,
+        "f1_score": 0.6577,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9252,
+        "recall": 0.9665,
+        "f1_score": 0.9454,
+        "support": 2059
+      },
+      "f1_macro": 0.8016
+    }
+  },
+  "exp3_TEST_3_FE2_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:07:03",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 3. FE2 MLP"
+    },
+    "config": {
+      "features_count": 22,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7439,
+      "ap_std": 0.0134,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7278,
+        "precision_std": 0.0378,
+        "recall_mean": 0.5876,
+        "recall_std": 0.0398,
+        "f1_mean": 0.6482,
+        "f1_std": 0.0172
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9263,
+        "precision_std": 0.006,
+        "recall_mean": 0.9585,
+        "recall_std": 0.0104,
+        "f1_mean": 0.942,
+        "f1_std": 0.0033
+      }
+    },
+    "test_results": {
+      "ap": 0.7499,
+      "threshold": 0.5,
+      "accuracy": 0.9078,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7343,
+        "recall": 0.644,
+        "f1_score": 0.6862,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9354,
+        "recall": 0.9568,
+        "f1_score": 0.946,
+        "support": 2059
+      },
+      "f1_macro": 0.8161
+    }
+  },
+  "exp3_TEST_4_FE3_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:07:14",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 4. FE3 MLP"
+    },
+    "config": {
+      "features_count": 25,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7433,
+      "ap_std": 0.0156,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7177,
+        "precision_std": 0.029,
+        "recall_mean": 0.6024,
+        "recall_std": 0.0352,
+        "f1_mean": 0.654,
+        "f1_std": 0.0222
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9285,
+        "precision_std": 0.0056,
+        "recall_mean": 0.9557,
+        "recall_std": 0.0078,
+        "f1_mean": 0.9419,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7518,
+      "threshold": 0.5,
+      "accuracy": 0.9103,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7571,
+        "recall": 0.6283,
+        "f1_score": 0.6867,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9331,
+        "recall": 0.9626,
+        "f1_score": 0.9476,
+        "support": 2059
+      },
+      "f1_macro": 0.8172
+    }
+  },
+  "exp3_TEST_5_FE4_MLP": {
+    "meta": {
+      "timestamp": "2026-11-03 15:07:25",
+      "model_name": "MLP (PyTorch)",
+      "notebook": "exp3_feature_generation.ipynb",
+      "description": "Exp3 Test | 5. FE4 MLP"
+    },
+    "config": {
+      "features_count": 26,
+      "features": [
+        "Administrative",
+        "Administrative_Duration",
+        "Informational",
+        "Informational_Duration",
+        "ProductRelated",
+        "ProductRelated_Duration",
+        "BounceRates",
+        "ExitRates",
+        "PageValues",
+        "SpecialDay",
+        "Month",
+        "OperatingSystems",
+        "Browser",
+        "Region",
+        "TrafficType",
+        "VisitorType",
+        "Weekend",
+        "Has_PageValues",
+        "PV_per_TotalPages",
+        "PV_per_Duration",
+        "PV_to_ExitRate",
+        "PV_x_NewVisitor",
+        "ProdDur_to_ExitRate",
+        "Avg_Dur_per_Page",
+        "Admin_per_TotalPages",
+        "Month_x_HasPV"
+      ],
+      "threshold": 0.5
+    },
+    "cv_results": {
+      "ap_mean": 0.7384,
+      "ap_std": 0.0175,
+      "class_1": {
+        "label": "Mua",
+        "precision_mean": 0.7107,
+        "precision_std": 0.0319,
+        "recall_mean": 0.6064,
+        "recall_std": 0.0407,
+        "f1_mean": 0.6529,
+        "f1_std": 0.0221
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision_mean": 0.9291,
+        "precision_std": 0.0063,
+        "recall_mean": 0.9537,
+        "recall_std": 0.0094,
+        "f1_mean": 0.9412,
+        "f1_std": 0.0036
+      }
+    },
+    "test_results": {
+      "ap": 0.7521,
+      "threshold": 0.5,
+      "accuracy": 0.9058,
+      "class_1": {
+        "label": "Mua",
+        "precision": 0.7249,
+        "recall": 0.6414,
+        "f1_score": 0.6806,
+        "support": 382
+      },
+      "class_0": {
+        "label": "Không mua",
+        "precision": 0.9349,
+        "recall": 0.9548,
+        "f1_score": 0.9447,
+        "support": 2059
+      },
+      "f1_macro": 0.8126
+    }
+  }
+}
