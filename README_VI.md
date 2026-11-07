@@ -91,10 +91,10 @@ Thực hiện chuỗi thực nghiệm bóc tách (**ablation study**) từ **Exp
 │   ├── online_shoppers_intention.csv # Dữ liệu gốc
 │   ├── dataset-description.md # Mô tả dữ liệu
 │   ├── evaluation_skills.md # Quy chuẩn đánh giá
-│   ├── experiment_results.json # Kết quả thực nghiệm
-│   └── README.md            # Hướng dẫn dự án
+│   └── experiment_results.json # Kết quả thực nghiệm
 ├── report.pdf               # Báo cáo chi tiết
-└── slide.pptx               # Slide thuyết trình
+├── slide.pptx               # Slide thuyết trình
+└── README.md                # Hướng dẫn dự án (hiển thị trang chủ GitHub)
 ```
 
 ---
