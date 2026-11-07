@@ -1,5 +1,8 @@
 # Online Shoppers Purchasing Intention Dataset
 
+> **Nguồn dữ liệu gốc (UCI ML Repository):**  
+> [https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
+
 Of the 12,330 sessions in the dataset, 84.5% (10,422) were negative class samples that did not end with shopping, and the rest (1908) were positive class samples ending with shopping.
 
 ## Dataset Characteristics

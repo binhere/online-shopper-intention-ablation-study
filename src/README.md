@@ -79,19 +79,22 @@ Thực hiện chuỗi thực nghiệm bóc tách (**ablation study**) từ **Exp
 ## 🛠️ 4. Cấu trúc thư mục
 
 ```text
-├── exp0_baseline.ipynb           # Thực nghiệm 0: Baseline với dữ liệu thô
-├── exp1_transform_scale.ipynb    # Thực nghiệm 1: Khử lệch Log1p & Chuẩn hóa StandardScaler
-├── exp2_feature_ablation.ipynb   # Thực nghiệm 2: LOFO Feature Importance & Feature Shadowing
-├── exp3_feature_generation.ipynb # Thực nghiệm 3: Tạo 16 đặc trưng hành vi chuyên sâu
-├── eda.ipynb                     # Phân tích khám phá dữ liệu trực quan (EDA)
-├── logger.py                     # Quản lý kiến trúc MLPNet, huấn luyện, K-Fold CV & Logging
-├── visualization.py              # Thư viện vẽ biểu đồ PR Curve, Confusion Matrix, Learning Curves
-├── online_shoppers_intention.csv # Bộ dữ liệu gốc
-├── dataset-description.md        # Mô tả chi tiết các trường thông tin trong bộ dữ liệu
-├── evaluation_skills.md          # Hướng dẫn quy chuẩn đánh giá mô hình và thiết lập thử nghiệm
-├── experiment_results.json       # Lưu trữ chi tiết toàn bộ số liệu và kết quả các thực nghiệm
-├── images/                       # Thư mục chứa các biểu đồ trực quan hóa dữ liệu và kết quả
-└── README.md                     # Tài liệu hướng dẫn dự án
+├── images/                  # Biểu đồ trực quan hóa
+├── src/                     # Mã nguồn, dữ liệu và tài liệu
+│   ├── eda.ipynb            # Phân tích khám phá dữ liệu
+│   ├── exp0_baseline.ipynb   # Baseline
+│   ├── exp1_transform_scale.ipynb  # Log1p & StandardScaler
+│   ├── exp2_feature_ablation.ipynb # LOFO & Feature Shadowing
+│   ├── exp3_feature_generation.ipynb # Feature Engineering
+│   ├── logger.py            # MLPNet, huấn luyện, K-Fold CV & Logging
+│   ├── visualization.py     # Các hàm trực quan hóa
+│   ├── online_shoppers_intention.csv # Dữ liệu gốc
+│   ├── dataset-description.md # Mô tả dữ liệu
+│   ├── evaluation_skills.md # Quy chuẩn đánh giá
+│   ├── experiment_results.json # Kết quả thực nghiệm
+│   └── README.md            # Hướng dẫn dự án
+├── report.pdf               # Báo cáo chi tiết
+└── slide.pptx               # Slide thuyết trình
 ```
 
 ---
@@ -104,5 +107,12 @@ pip install numpy pandas scikit-learn xgboost torch matplotlib seaborn
 ```
 
 ### Quy trình chạy thực nghiệm:
-1. Mở và chạy `eda.ipynb` để nắm bức tranh tổng thể về phân phối dữ liệu và độ lệch.
-2. Lần lượt chạy các notebook `exp0` $\to$ `exp1` $\to$ `exp2` $\to$ `exp3`.
+1. Mở và chạy `src/eda.ipynb` để nắm bức tranh tổng thể về phân phối dữ liệu và độ lệch.
+2. Lần lượt chạy các notebook trong `src/`: `exp0` $\to$ `exp1` $\to$ `exp2` $\to$ `exp3`.
+
+---
+
+## 📚 6. Nguồn dữ liệu & Tham khảo (References)
+
+- **Dataset Source:** [UCI Machine Learning Repository - Online Shoppers Purchasing Intention Dataset](https://archive.ics.uci.edu/dataset/468/online+shoppers+purchasing+intention+dataset)
+- **Bài báo gốc:** Sakar, C.O., Polat, S.O., Katircioglu, M. et al. *Real-time prediction of online shoppers' purchasing intention using multilayer perceptron and LSTM neural networks*. Neural Comput & Applic 31, 6893–6908 (2019). [DOI: 10.1007/s00521-018-3523-0](https://doi.org/10.1007/s00521-018-3523-0)
